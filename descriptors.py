@@ -58,7 +58,7 @@ class ValidationError(ValueError):
         Returns:
             str: A JSON string representing all logged validation errors.
         """
-        return json.dumps(cls.get_errors(), indent=4)
+        return json.dumps(cls.get_errors().copy(), indent=4)
 
 
 
